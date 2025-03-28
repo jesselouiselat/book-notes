@@ -1,0 +1,295 @@
+html{
+    font-family: Arial, sans-serif;
+
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url("/images/background-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    /* align-items: center; */
+    margin: 20px;
+    border-radius: 20px;
+    width: auto;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: auto;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 20px;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header .logo_img{
+    height: 35px;
+    width: auto;
+}
+
+.header .header_logo{
+    height: 25px;
+    width: auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo_text{
+    padding: auto;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px; 
+    align-items: center;
+}
+
+.header a:hover{
+    color: rgb(80, 76, 76);
+}
+
+
+.sort-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px;
+    padding-bottom: 0px;
+
+}
+
+.sort-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.sort-container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sort-container input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sort-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.book{
+    background: rgba(255, 255, 255, 0.4);
+
+
+}
+
+.book_container{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    
+
+}
+
+.book_container > a, .book{
+    display: flex;   
+    align-items: flex-start; 
+    /* background: rgba(255, 255, 255, 0.4); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.book_details{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: justify;
+}
+
+.book_cover{
+    height: 350px;
+    width: auto;
+    padding-top: 25px;
+}
+
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.4);
+    margin: auto;
+    padding: 30px ;
+    border-radius: 20px;
+    width: auto;
+
+}
+
+.form_container > .input_group {
+    width: 100%;
+}
+
+
+input, textarea{
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid rgb(19, 103, 187);
+
+}
+
+textarea{
+    resize: none;
+    height: 250px;
+    resize: vertical;
+    overflow: auto;
+    padding: 20px;
+}
+
+label{
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-weight: 200px;
+}
+
+.button {
+    text-align: center;
+    width: 40%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.button_group .button{
+    width: auto;
+}
+
+.add_button, .confirm_button{
+    background-color: rgb(0, 128, 58);
+}
+
+.submit_button, .edit_button{
+    background-color: rgb(0, 81, 255);
+}
+
+.delete_button, .cancel_button{
+    background-color: rgb(231, 51, 51);
+    margin-top: 15px;
+}
+
+a.button{
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+.footer_container{
+    margin: 15px;
+}
+
+.icons_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons_container .icons{
+    height: 20px;
+    width: auto;
+    color: #000000;
+
+}
+
+.icons:hover{
+    color: #525151;
+
+
+}
+
+.credits_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.credits_container .credit{
+    margin: 5px;
+}
+
+.credits_container a{
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.credits_container a:hover{
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+

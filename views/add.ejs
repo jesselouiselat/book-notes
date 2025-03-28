@@ -1,0 +1,27 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div class="container">
+        <form action="/add_book" method="POST">
+            <div class="form_container">
+
+                <% if (locals.errorMessage) { %>
+                    <h3><%= errorMessage %></h3> 
+                <% } %>
+                <label for="title">Title</label>
+                <input class="title" type="text" placeholder="Title" value="<%= locals.prevTitle %>" required name="title" >
+                <label for="author">Author</label>
+                <input class="author" type="text" placeholder="Author" value="<%= locals.prevAuthor %>" required name="author">
+                <label for="rating">Rating (1 to 10)</label>
+                <input class="rating" type="number" min="1" max="10" placeholder="Rating out of 10" value="<%= locals.prevRating %>" required name="rating">
+                <label for="review">Review</label>
+                <textarea class="review" id="" placeholder="Write your review" required name="review" ><%= locals.prevReview %></textarea>
+                <input class="submit_button button" type="submit" value="Submit Book" id="">
+            </div>        
+        </form>
+        <a href="/" class="button cancel_button">Cancel</a>
+
+    </div>
+</body>
+
+<%- include("footer.ejs") %>

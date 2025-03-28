@@ -1,0 +1,44 @@
+<%- include("header.ejs")  %>
+
+<body>
+    <div class="container">
+             
+        <% if (locals.books) %>
+            <div class="book_container">
+                <div class="sort-container">
+                    <form action="/" method="GET">
+                      <label for="order">Order by:</label>
+                      <select name="order" id="">
+                        <option name="newest" id="" <%= orderBy === "Most Recent" ? "selected":""%> >Most Recent</option>
+                        <option name="oldest" id="" <%= orderBy === "Oldest" ? "selected":""%>>Oldest</option>
+                        <option name="best" id="" <%= orderBy === "Favorite Books" ? "selected":""%>>Favorite Books</option>
+                        <option name="worst" id="" <%= orderBy === "Least Favorite Book" ? "selected":""%>>Least Favorite Book</option>
+                        <option name="title_ascending" id="" <%= orderBy === "Alphabetical Order" ? "selected":""%>>Alphabetical Order</option>
+                      </select>
+                    <input type="submit" name="" id="Submit">
+                    </form>
+                </div> 
+                <% books.forEach(book => { %>                
+                    <a href="/book/<%= book.id %>">
+                        <img class="book_cover" src="<%= book.book_cover %>" alt="">
+                        <div class="book_details">
+                            <h2 class="book_title"><%= book.title %></h2>
+                        <h4 class="book_author"><%= book.author %></h4>
+                        <% if (book.description) { %>
+                        <p class="book_description"><br> <%= book.description %></p>
+                        <% } %>
+                        </div>
+                    </a>                                     
+                <% }); %>
+            </div>         
+            <a href="/add" class="button add_button">Add New Book</a>        
+    </div>
+    <div class="sub_container">
+
+    </div>
+
+</body>
+
+
+
+<%- include("footer.ejs") %>

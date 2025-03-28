@@ -1,0 +1,26 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div class="container">
+        <form action="/update" method="POST"> 
+            <div class="form_container">
+                <input  type="hidden" value="<%= locals.id %>" name="id">  
+                <label for="title">Title</label>
+                <input class="title" type="text" placeholder="Title" value="<%= locals.title %>" required readonly name="title" >
+                <label for="author">Author</label>
+                <input class="author" type="text" placeholder="Author" value="<%= locals.author %>" required readonly name="author">
+                <label for="rating">Rating (1 to 10)</label>
+                <input class="rating" type="number" min="1" max="10" placeholder="Rating out of 10" value="<%= locals.rating %>" required name="rating">
+                <label for="review">Review</label>
+                <textarea class="review" id="" placeholder="Write your review" required name="review" ><%= locals.review %></textarea>
+                <input class="submit_button button" type="submit" value="Update" id="">
+            </div>
+        </form>
+        <a href="/" class="button cancel_button">Cancel</a>
+
+    </div>
+</body>
+
+
+
+<%- include("footer.ejs") %>

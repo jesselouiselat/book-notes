@@ -1,0 +1,70 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div class="container">
+        <div class="book">
+            <img class="book_cover" src="<%= book.book_cover %>" alt="">
+
+            <div class="book_details">
+                <h2 class="book_title"><%= book.title %></h2>
+                <h4 class="book_author"><%= book.author %></h4>
+                <p class="book_rating">Rating: <%= book.rating %>/10</p>
+                <% if (book.description) { %>
+                <p class="book_description">Decription: <br> <%= book.description %></p>
+                <% } %>
+                <p class="book_review">Review: <br> <%= book.review %></p>
+                <p class="book_date_finished">Date Finished: <%= book.date %></p>
+
+
+                <div class="button_group">
+                    <input type="password"  id="edit_input_<%= book.id %>" class="password" placeholder="Enter password to edit" hidden required>
+                    <button id="edit_button_<%= book.id %>" class="button confirm_button" hidden onclick="confirm(`<%= book.id %>`, 'edit')">Confirm Edit</button>
+                    <button class="button show_button edit_button" onclick="show(`<%= book.id %>`, 'edit')">Edit</button>
+                
+                    <input type="password" id="delete_input_<%= book.id %>" class="password" placeholder="Enter pasword to delete" hidden required>
+                    <button id="delete_button_<%= book.id %>" class="button confirm_button" hidden onclick="confirm(`<%= book.id %>`, 'delete')">Confirm Delete</button>
+                    <button class="button show_button delete_button" onclick="show(`<%= book.id %>`, 'delete')">Delete</button>                 
+                </div>                           
+            </div>
+        </div>
+
+    </div> 
+</body>
+
+
+
+<script>
+
+    function show(id, action){
+        if (action == 'edit') {
+            document.getElementById("edit_button_"+id).removeAttribute("hidden")
+            document.getElementById("edit_input_"+id, "edit_button_"+id).removeAttribute("hidden")  
+            document.getElementsByClassName("edit_button")[0].setAttribute("hidden", true)     
+            document.getElementsByClassName("delete_button")[0].setAttribute("hidden", true)          
+
+        } else if (action == 'delete') {
+            document.getElementById("delete_button_"+id).removeAttribute("hidden")
+            document.getElementById("delete_input_"+id).removeAttribute("hidden")            
+            document.getElementsByClassName("delete_button")[0].setAttribute("hidden", true)
+            document.getElementsByClassName("edit_button")[0].setAttribute("hidden", true)
+
+        }
+
+    }
+
+    function confirm(id, action) {
+        let enteredPassword = (action === "edit") ?
+            document.getElementById("edit_input_" + id).value :
+            document.getElementById("delete_input_" + id).value;
+    
+        if (enteredPassword === "123456") {  
+            window.location.href = "/" + action + "/" + id;
+        } else {
+            alert("Incorrect password!");
+        }
+    }
+
+</script>
+            
+
+<%- include("footer.ejs") %>
