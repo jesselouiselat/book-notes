@@ -1,16 +1,57 @@
-# Book Notes App <!-- # H1 heading -->
+# Book Notes App
 
-A simple web app to add, edit, and manage personal book notes. Built with Node.js, Express, and EJS. <!-- paragraph -->
+![GitHub repo size](https://img.shields.io/github/repo-size/jesselouiselat/book-notes)
+![GitHub last commit](https://img.shields.io/github/last-commit/jesselouiselat/book-notes)
+![GitHub issues](https://img.shields.io/github/issues/jesselouiselat/book-notes)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## 📚 Features <!-- ## H2 heading -->
+## A web app to add and manage personal book notes using Node.js, Express, and EJS.
 
-- Add, edit, and delete book notes <!-- - bullet list -->
-- EJS templating with partials (`header.ejs`, `footer.ejs`) <!-- inline code -->
-- Clean and minimal UI
+### ✨ Features
 
-## 🚀 Installation <!-- ## H2 heading -->
+- Books can be sorted by the user.
+- Add entries based on title and author.
+- Include personal rating and review.
+- Delete a book (requires password to confirm).
 
-1. Clone the repo: <!-- numbered list -->
-   ```bash <!-- code block start -->
-   git clone https://github.com/your-username/book-notes-app.git
+---
+
+### 🚀 Usage
+
+- Visit: `http://localhost:3000`
+- Sort the books as needed.
+- Click "Add Note" to create a new book note.
+- Use "Edit" to update an existing note.
+
+---
+
+### ⚙️ Installation
+
+1. Clone the repo
+   ```bash
+    git clone https://github.com/jesselouiselat/book-notes.git
    ```
+2. Go into the folder
+   ```bash
+   cd book-notes
+   ```
+3. Install the dependencies
+
+   ```bash
+   npm install
+   ```
+
+4. Run the app
+   ```bash
+   npm start
+   ```
+
+---
+
+## Screenshots
+
+![Home](./screenshots/home.PNG)
+![BookPage](./screenshots//book_page.PNG)
+![Add/EditPage](./screenshots/add_edit_page.PNG)
+
+---
