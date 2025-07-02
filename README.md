@@ -1,29 +1,16 @@
-# Book Notes App <!-- # = H1 heading -->
+# Book Notes App <!-- # H1 heading -->
 
-A simple web app to manage personal book notes using Node.js, Express, and EJS.
+A simple web app to add, edit, and manage personal book notes. Built with Node.js, Express, and EJS. <!-- paragraph -->
 
-<!-- Plain text for short description -->
+## 📚 Features <!-- ## H2 heading -->
 
----
+- Add, edit, and delete book notes <!-- - bullet list -->
+- EJS templating with partials (`header.ejs`, `footer.ejs`) <!-- inline code -->
+- Clean and minimal UI
 
-## 🚀 Features <!-- ## = H2 heading -->
+## 🚀 Installation <!-- ## H2 heading -->
 
-- Add and edit book notes <!-- - = bullet list -->
-- EJS templating with partials
-- Express routing and form handling
-
----
-
-## 📂 Folder Structure
-
-views/
-├── add.ejs
-├── book.ejs
-├── edit.ejs
-├── footer.ejs
-├── header.ejs
-└── index.ejs
-
-<!-- = code block -->
-
-<!-- Above shows folder layout using a fenced code block -->
+1. Clone the repo: <!-- numbered list -->
+   ```bash <!-- code block start -->
+   git clone https://github.com/your-username/book-notes-app.git
+   ```
